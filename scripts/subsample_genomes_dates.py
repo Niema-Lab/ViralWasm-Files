@@ -46,7 +46,7 @@ if __name__ == "__main__":
     out_files = list()
     for fn in [args.out_seqs, args.out_dates]:
         if fn.lower().endswith('.gz'):
-            out_files.append(gopen(fn, 'wt'))
+            out_files.append(gopen(fn, 'wt', compresslevel=9))
         elif fn == 'stdout':
             out_files.append(stdout)
         elif fn == 'stderr':
